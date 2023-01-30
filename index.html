@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--- Author: Ante Dujic -->
+<html lang="en">
+<head>
+	<title>Login Page</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>	
+</head>
+
+<!-- 
+	Login body color different to the other pages, 
+	therefore an id to access it is defined 
+-->
+<body id="loginBody">
+
+	<!-- Form and heading container -->
+	<div class="loginContainer">
+		<h1 class="h1">WELCOME</h1>
+		<!-- Login form -->
+		<form class="login" align="right">
+			<!-- Input of type text for username, set to be required (can't be left empty) -->
+			<input class="loginDetails" type="text" placeholder="Enter Username" id="uname" name="uname" required>
+			<!-- Input of type password, set to be required -->
+			<input class="loginDetails" type="password" placeholder="Enter Password" id="pword" name="psw" required>
+			<!-- 
+				Login button
+				Runs login function for validation - see script.js
+			-->
+			</br><button class="loginButton" type="reset" onclick=login() >LOGIN</button>
+		</form>
+	</div>
+
+
+</body>
+
+</html>

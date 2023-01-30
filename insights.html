@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--- Author: Ante Dujic -->
+<html lang="en">
+
+<head>
+	<title>Insights page</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+	
+	<!-- Navigation bar -->
+	<nav class="navbar">
+		<div class="logoContainer"><img id="logo" src="logoW.png" alt="Logo White", width="100"></div>
+		<div class="pages">
+			<ul>
+				<li><a href="home.html">HOME</a></li>
+				<li><a href="artwork.html">ARTWORK</a></li>
+				<li class="active"><a class="active" href="insights.html">INSIGHTS</a></li>
+				<li><a href="contact.html">CONTACT</a></li>
+				<li><a href="about.html">ABOUT</a></li>
+			</ul>	
+	</nav>
+	
+	<!-- Form container -->
+	<div class="optionsMenu">
+		<div class="selector">
+			<label for="chartData">Select data:</label></br>
+			<!--
+				Select data
+				Selected data accessed through DOM, assigned to a variable and inputted into code - see script.js
+				Depending on selection chart is drawn using data from csv file or 2D array
+			-->
+			<select id="chartData">
+				<option value="month">Sales by Month</option>
+				<option value="artwork">Sales by Artwork</option>
+			</select>
+			<label for="chartHeight">Select height:</label></br>
+			<!--
+				Select data
+				Selected data accessed through DOM, assigned to a variable and inputted into code - see script.js
+			-->
+			<select id="chartHeight">
+				<option value="300">300 pixels</option>
+				<option value="600">600 pixels</option>
+			</select>
+			<label for="chartWidth">Select width:</label></br>
+			<!--
+				Select data
+				Selected data accessed through DOM, assigned to a variable and inputted into code - see script.js
+			-->
+			<select id="chartWidth">
+				<option value="600">600 pixels</option>
+				<option value="1000">1000 pixels</option>
+			</select>
+			<label for="chartAnimation">Select draw speed:</label></br>
+			<!--
+				Select data
+				Selected data accessed through DOM, assigned to a variable and inputted into code - see script.js
+			-->
+			<select id="chartAnimation">
+				<option value="1000">1 sec</option>
+				<option value="3000">3 sec</option>
+				<option value="5000">5 sec</option>
+			</select>
+			<label for="colorPicker">Select color:</label></br>
+			<!--
+				Select data
+				Selected data accessed through DOM, assigned to a variable and inputted into code - see script.js
+			-->
+			<input type="color" value="#FFFFFF" id="colorPicker"></br></br>
+			
+			<!-- Runs the function drawChart() that uses values from the selected above -->
+			<button class="drawButton" onclick="drawChart()">Draw chart</button>
+		</div>
+	</div>
+	
+	<!-- Area for graph to be drawn to (append SVG) -->
+	<div id="graphContainer"> </div>
+
+</body>
+
+</html>

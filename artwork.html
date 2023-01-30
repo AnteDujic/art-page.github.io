@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--- Author: Ante Dujic -->
+<html lang="en">
+
+<head>
+	<title>Artwork Page</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
+	<!-- To use Font Awesome icons - heart -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+	<!-- Navigation bar -->
+	<nav class="navbar">
+		<div class="logoContainer"><img id="logo" src="logoW.png" alt="Logo White", width="100"></div>
+		<div class="pages">
+			<ul>
+				<li><a href="home.html">HOME</a></li>
+				<li class="active"><a class="active" href="artwork.html">ARTWORK</a></li>
+				<li><a href="insights.html">INSIGHTS</a></li>
+				<li><a href="contact.html">CONTACT</a></li>
+				<li><a href="about.html">ABOUT</a></li>
+			</ul>	
+	</nav>
+
+	<!-- Options LHS (Button container) -->
+	<div class="buttonContainer">
+		<!-- Button: Runs the function to display images (change html style) - see script.js -->
+		<button id="button" onclick=showReal()>REALISM</button><br>
+		<!-- Button: Runs the function to display images (change html style) - see script.js	-->
+		<button id="button" onclick=showMini()>MINIMALISM</button><br>       
+	</div>
+		
+	<!-- Main page content (artwork, heart, likes) for MINIMALISM -->
+	<div class="imageContainer" id="gridMini" style="display:none;">
+		<div class="images">
+			<!-- Image -->
+			<img class = "art" src="minimalism/1.jpg" alt="#mini1#" title="mini#1" style="height:400px">
+			<!-- Heart -->
+			<div class = "heartContainer">
+				<!--
+					Following applies for each heart class:
+					Heart icon on click runs the function that increases the like counter
+					It accesses the paragraph through DOM and changes its content (num + 1)
+				-->
+				<div class="heart"  style="cursor: pointer" onClick="clickOneM()"><i class="fa fa-heart" style="font-size:60px;"></i></div>
+			</div>
+			<!-- Like -->
+			<div id="likeOneM" class ="likeCount"> <p> <i class="fa fa-heart" style="font-size:20px;"></i> </p> <p id="oneM"> </p> </div>
+		</div>
+		<div class="images">
+			<img class = "art" src="minimalism/2.jpg" alt="#mini2#" title="mini#2" style="height:400px">
+			<div class = "heartContainer">
+				<div class="heart" style="cursor: pointer" onClick="clickTwoM()"><i class="fa fa-heart" style="font-size:60px;"></i></div>
+			</div>
+			<div id="likeTwoM" class ="likeCount"> <p> <i class="fa fa-heart" style="font-size:20px;"></i> </p> <p id="twoM"> </p> </div>
+		</div>
+		<div class="images">
+			<img class = "art" src="minimalism/3.jpg" alt="#mini3#" title="mini#3" style="height:400px">
+			<div class = "heartContainer">
+				<div class="heart" style="cursor: pointer" onClick="clickThreeM()"><i class="fa fa-heart" style="font-size:60px;"></i></div>
+			</div>
+			<div id="likeThreeM" class ="likeCount"> <p> <i class="fa fa-heart" style="font-size:20px;"></i> </p> <p id="threeM"> </p> </div>
+		</div>
+		<div class="images">
+			<img class = "art" src="minimalism/4.jpg" alt="#mini4#" title="mini#4" style="height:400px">
+			<div class = "heartContainer">
+				<div class="heart" style="cursor: pointer" onClick="clickFourM()"><i class="fa fa-heart" style="font-size:60px;"></i></div>
+			</div>
+			<div id="likeFourM" class ="likeCount"> <p> <i class="fa fa-heart" style="font-size:20px;"></i> </p> <p id="fourM"> </p> </div>
+		</div>
+	</div>
+	
+	<!-- Main page content (artwork, heart, likes) for REALISM -->
+	<div class="imageContainer" id="gridReal" style="display:block;">
+		<div class="images">
+			<img class = "art" src="realism/1.jpg" alt="#real1#" title="real#1" style="height:400px">
+			<div class = "heartContainer">
+				<div class="heart" style="cursor: pointer" onClick="clickOneR()"><i class="fa fa-heart" style="font-size:60px;"></i></div>
+			</div>
+			<div id="likeOneR" class ="likeCount"> <p> <i class="fa fa-heart" style="font-size:20px;"></i> </p> <p id="oneR"> </p> </div>
+		</div>
+		<div class="images">
+			<img class = "art" src="realism/2.jpg" alt="#real2#" title="real#2" style="height:400px">
+			<div class = "heartContainer">
+				<div class="heart" style="cursor: pointer" onClick="clickTwoR()"><i class="fa fa-heart" style="font-size:60px;"></i></div>
+			</div>
+			<div id="likeTwoR" class ="likeCount"> <p> <i class="fa fa-heart" style="font-size:20px;"></i> </p> <p id="twoR"> </p> </div>
+		</div>
+		<div class="images">
+			<img class = "art" src="realism/3.jpg" alt="#real3#" title="real#3" style="height:400px">
+			<div class = "heartContainer">
+				<div class="heart" style="cursor: pointer" onClick="clickThreeR()"><i class="fa fa-heart" style="font-size:60px;"></i></div>
+			</div>
+			<div id="likeThreeR" class ="likeCount"> <p> <i class="fa fa-heart" style="font-size:20px;"></i> </p> <p id="threeR"> </p> </div>
+		</div>
+		<div class="images">
+			<img class = "art" src="realism/4.jpg" alt="#real4#" title="real#4" style="height:400px">
+			<div class = "heartContainer">
+				<div class="heart" style="cursor: pointer" onClick="clickFourR()"><i class="fa fa-heart" style="font-size:60px;"></i></div>
+			</div>
+			<div id="likeFourR" class ="likeCount"> <p> <i class="fa fa-heart" style="font-size:20px;"></i> </p> <p id="fourR"> </p> </div>
+		</div>
+	</div>
+
+	
+</body>
+<script>
+// Defining (initialize) like variables to display under the artwork // 	
+let mOne = 37;
+let mTwo = 63;
+let mThree = 41;
+let mFour = 55;
+let rOne = 99;
+let rTwo = 79;
+let rThree = 61;
+let rFour = 59;
+
+// Accessing HTML content with specified id ("oneM", "twoM", ...) and input above defined values //
+document.getElementById("oneM").innerHTML = mOne;
+document.getElementById("twoM").innerHTML = mTwo;
+document.getElementById("threeM").innerHTML = mThree;
+document.getElementById("fourM").innerHTML = mFour;
+
+document.getElementById("oneR").innerHTML = rOne;
+document.getElementById("twoR").innerHTML = rTwo;
+document.getElementById("threeR").innerHTML = rThree;
+document.getElementById("fourR").innerHTML = rFour;
+
+</script>
+</html>

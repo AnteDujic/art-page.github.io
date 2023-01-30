@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--- Author: Ante Dujic -->
+<html lang="en">
+
+<head>
+	<title>About page</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<script src="script.js"></script>
+	<!-- To use Font Awesome icons - heart -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>	
+
+<body>
+	<!-- Navigation bar -->
+	<nav class="navbar">
+		<div class="logoContainer"><img id="logo" src="logoW.png" alt="Logo White", width="100"></div>
+		<div class="pages">
+			<ul>
+				<li><a href="home.html">HOME</a></li>
+				<li><a href="artwork.html">ARTWORK</a></li>
+				<li><a href="insights.html">INSIGHTS</a></li>
+				<li><a href="contact.html">CONTACT</a></li>
+				<li  class="active"><a class="active" href="about.html">ABOUT</a></li>
+			</ul>	
+	</nav>
+	
+	<!-- Main content container -->
+	<div class="about">
+		<!-- 
+			Red heart (opacity 0 on page access)
+			Runs a function when clicked - see script.js
+		-->
+		<div id="redHeart">
+			<div id="dot"  style="cursor: pointer" onclick="project()"><i class="fa fa-heart" style="font-size:40px;"></i></div>
+		</div>
+		<!-- About -->
+		<p id="aboutProject">
+			ETNA CIYUD IS AN ART PROJECT STARTED BY AN AMATEUR ARTIST ANTE DUJIC IN 2020. BUILDING ON HIS CHILDHOOD PASSION FOR DRAWING HE TAUGHT HIMSELF TO DRAW AND PAINT. ANTE'S WORK MAINLY FOCUSES ON BLACK AND WHITE PORTRAITS, REPRESENTING HUMAN FRAGILITY WITH SUBTLE EMPHASIS ON UNSETTLING.
+		</p>
+		<!-- 
+			Red dot (button)
+			Runs a function when clicked - see script.js
+		-->
+		<div id="redDot" style="display:block;">
+			<div id="dot"  style="cursor: pointer" onclick="colorRed()"><i class="fa fa-dot-circle-o" style="font-size:40px;"></i></div>
+		</div>		
+	</div>
+
+	
+</body>
+
+</html>

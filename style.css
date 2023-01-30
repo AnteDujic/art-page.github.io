@@ -1,0 +1,550 @@
+
+
+			/* SHARED STYLING */
+/* ------------------------------------- */
+
+/* Set the page font(s) and remove margin and padding */
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color:black;
+}
+/* Set the page font(s) and remove margin and padding for login page only*/
+#loginBody {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color:white;
+}
+
+/* Navigation bar container (logo + pages) positioning */
+.navbar {
+	/* Display links after logo */
+	display: flex;
+	/* Display logo and link one on each side, adding space between them */ 
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* Navigation bar resize when resizing window */
+@media only screen and (max-width: 1100px) {
+  .navbar {
+	zoom: 0.7;
+  }
+}
+
+/* Navigation bar further resize when further resizing window */
+@media only screen and (max-width: 800px) {
+  .navbar {
+	zoom: 0.4;
+  }
+}
+
+/* Logo positioning and styling*/
+.logoContainer {
+	position:relative;
+	left: 30px;
+	margin: 20px;
+}
+
+/* Unordered list (pages container) positioning and styling */
+.pages ul {
+	display: flex;
+	font-size: 20px;
+}
+
+/* List items (link containers) positioning and styling */
+.pages li {
+	/* No list styling (e.g. circles) */
+	list-style: none;
+	/* Add curve to the border */
+	border-radius:5px;
+	width:200px;
+	height:200px;
+	text-align: center;
+}
+
+/* Links to pages positioning (centre) and styling */
+.pages li a {
+	position: relative;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	display: block;
+	text-decoration: none;
+	color: white;
+	padding: 20px;	
+}
+
+/* Effect on hover over list item (Page name) */
+.pages li:hover {
+	text-decoration: underline;
+}
+
+/* Effect when page is active (current page) */
+.pages li.active{
+	background-color: white;
+}
+
+/* Effect when page (link) is active (current page) - done separately for visability */
+.pages li a.active{
+	color: black;
+}
+	
+/* Page content container positioning (center) and styling */	
+.homeWelcome {
+	position: relative;
+	top: 100px;
+	width: 500px;
+	color: white;
+	margin: auto;
+	font-size: 100px;
+}
+
+
+			/* LOGIN PAGE */
+/* ------------------------------------- */
+
+/* Position the login form in the center of the screen */ 
+.login {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%); 
+}
+
+/* Position the class h1 ("WELCOME") above the login form */
+.h1 {
+	left: 50%;
+	top: 20%;
+	position: absolute;
+	transform: translate(-50%, -50%); 
+}
+
+/* Style the login button */
+.loginButton {
+	background-color: black;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	/* Change cursor when hovered over - indicates it's clickable */
+	cursor: pointer;
+	width: 100%;
+}
+
+/* Style the forms */
+.loginDetails {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	border: 1px solid #ccc;
+	/* Include padding and border in an element's total width and height */
+	box-sizing: border-box;
+}
+
+			/* HOME PAGE */
+/* ------------------------------------- */
+
+/* "WECLOME TO" text positioning and styling 
+	Aligned to the left side, with set font color, size and padding
+*/ 
+.welcome {
+	color: white;
+	text-align: left;
+	font-size: 20px;
+	padding: 20px;
+}
+
+/* "ART PAGE" text positioning and styling 
+	Aligned to the right side, with set font color, size and padding
+*/
+.artPage {
+	color: white;
+	text-align: right;
+	font-size: 20px;
+	padding: 20px;
+}
+
+/* Animation
+	Shows the first two words - name (ANTE DUJIC) that moves down the screen
+	revealing the letters behind.
+	Reference 1 - CSS amended from: https://codepen.io/lefoy/pen/oXadRa
+*/
+
+/* Container, set in the middle */
+.wrapper {
+	top: 50%;
+	left: 50%;	 
+	font-size: 0;
+}
+
+/* Name letters styling and positioning */
+.letter {
+	width: 100px;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	overflow: hidden;
+	font-family: arial;
+	font-size: 100px;
+	font-weight: 600;
+	text-align: center;
+}
+
+/* Name letters before the animation starts styling
+	Letters positioned and animation name and time set
+ */
+.letter:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: black;
+	margin-top: -216px;
+	animation-name: letterAnime;
+	animation-duration: 7s;
+}
+
+/*  Each name letter defined below */
+.letter:nth-child(1):before {
+	content: "A";
+}
+
+.letter:nth-child(2):before {
+	content: "N";
+}
+
+.letter:nth-child(3):before {
+	content: "T";
+}
+
+.letter:nth-child(4):before {
+	content: "E";
+}
+
+.letter:nth-child(5):before {
+	content: "";
+}
+
+.letter:nth-child(6):before {
+	content: "D";
+}
+
+.letter:nth-child(7):before {
+	content: "U";
+}
+
+.letter:nth-child(8):before {
+	content: "J";
+}
+
+.letter:nth-child(9):before {
+	content: "I";
+}
+
+.letter:nth-child(10):before {
+	content: "C";
+
+}
+
+/* Animation - moving letters from their current position down */
+@keyframes letterAnime {
+	from {
+		margin-top: 0px;
+	}
+	to {
+		margin-top: 200px;
+	}
+}
+/* END Reference 1 */
+
+
+			/* ARTWORK PAGE */
+/* ------------------------------------- */
+
+/* Button container ("MINIMALISM" & "REALISM") positioning */
+.buttonContainer {
+	position:relative;
+	top:50px;
+	clear:left;
+	float:left;
+	/* Width set to 20% (75% filled with images container) */
+	width:20%;
+}
+
+/* Buttons styling and positioning */
+#button {
+	background-color: black;
+	border: none;
+	color: white;
+	padding: 30px 30px;
+	text-align: left;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+/* Effect when hover over buttons */
+#button:hover {
+	text-decoration: underline;
+}
+
+/* Container for all content (artwork, heart, likes) positioning and styling */
+.imageContainer {
+	position:relative;
+	top:50px;
+	clear:right;
+	float:right;
+	/* Width set to 75% (20% filled with options menu) */
+	width: 75%;
+	color: white;
+}
+
+/* Image container styling and positioning */
+.images {
+	position:relative;
+	padding:10px;
+	float:left;
+	/* 	Opacity set to 1 - will be reduced on hover */ 
+	opacity: 1;
+}
+
+/* Artwork styling - set border style and padding */
+.art {
+	border: 5px solid white;
+	padding: 5px;
+}
+
+/* Heart icon container positioning and styling */
+.heartContainer {
+	/* 	Opacity set to 0 (invisible) */
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+/* Effect when hover over artwork */
+.images:hover .art {
+	/* 	Opacity decreses from 1 to 0.5 */ 
+	opacity: 0.5;
+}
+
+/* Effect when hover over heart icon container */
+.images:hover .heartContainer {
+	/* Opacity increases from 0 to 1, making it visible */
+	opacity: 1;
+}
+
+/* Heart icon postion and styling */
+.heart {
+	text-align: center;
+	padding: 10px;
+}
+
+/* When hover over heart icon becomes black indicating it's clickable */
+.heart:hover{
+	color: black;
+}
+
+/* Effect when heart is clicked on */
+.heart:active {
+	/* Change size (downscale) */
+	transform: scale(0.90);
+}
+
+/* Heart icon under the image (likes) positioned next to heart icon */
+.likeCount{
+	display: flex;
+}
+
+
+			/* INSIGHTS PAGE */
+/* ------------------------------------- */
+
+/* Form container styling and positioning, set to the left side of the page */
+.optionsMenu {
+	position: relative;
+	clear:left;
+	float:left;
+	left: 50px;
+	top: 20px;
+	width:200px;
+	color:white;
+	padding: 20px;
+	border-radius: 5px;
+}
+
+/* Any select type form styling */
+select {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 16px;
+}
+
+/* Draw Chart button styling */
+.drawButton{
+	background-color: black;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	border: 2px solid white;
+	cursor: pointer;
+}
+
+/* Event when hovered over the button changes background and font color */
+.drawButton:hover {
+	background-color: white;
+	color: black;
+}
+
+/* Styling of the input of color type */
+input[type=color]{
+	width: 55%;
+	border: 1px solid;
+	border-radius: 4px;
+	/* Include padding and border in an element's total width and height */
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 16px;
+}
+
+/* Area for the plot to be drawn in positioning */
+#graphContainer{
+	position:relative;
+	top:100px;
+	clear:right;
+	float:right;
+	/* Take 75% of the total width (from the right) */
+	width: 75%;
+}
+
+/* Color the bars on the plot when hovered over */
+rect:hover {
+	fill: #737373;
+}
+
+/* Color axis */
+.axisWhite line{
+	stroke: white;
+}
+/* Color axis */
+.axisWhite path{
+	stroke: white;
+}
+/* Color axis */
+.axisWhite text{
+	fill: white;
+}
+
+			/* CONTACT PAGE */
+/* ------------------------------------- */
+
+/* Form container positioning and styling */
+.formContainer{
+	position: relative;
+	clear:left;
+	float:left;
+	left: 50px;
+	top: 20px;
+	width:500px;
+	color:white;
+	padding: 20px;
+	/* Add curve to the border */
+	border-radius: 5px;
+}
+
+/* Text type forms styling */
+.inputText {
+	width: 50%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	resize: vertical;
+}
+
+/* Textarea form styling */
+textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	resize: vertical;
+}
+
+/* Button styling */
+.inputSubmit {
+	background-color: black;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	border: 2px solid white;
+	cursor: pointer;
+}
+
+/* Effect on button hover */
+.inputSubmit:hover {
+	background-color: white;
+	color: black;
+}
+
+
+			/* ABOUT PAGE */
+/* ------------------------------------- */
+
+/* Content box put to the middle of the page */
+.about {
+	width: 700px;
+	position: relative;
+	/* Center on window resize */
+	margin: auto;
+}
+
+/* Page decription positioning relative to the box above and styling */
+#aboutProject {
+	position: relative;
+	color:white;
+	width: 100%;
+	font-size: 30px;
+	text-align: justify;
+	padding: 20px;
+	/* Add bottom border (styling) */
+	border-bottom: 2px solid white;
+}
+
+/* Red dot positioning relative to the box above and styling */
+#redDot {
+	position: relative;
+	color:#880808;
+	width: 100%;
+	padding: 20px;
+	text-align: center;
+}
+/* Red heart positioning relative to the box above and styling
+	opacity set to 0 (invisible)
+*/
+#redHeart {
+	position: relative;
+	color:#880808;
+	width: 100%;
+	padding: 20px;
+	text-align: center;
+	/* Opacity set to 0 (invisible) */
+	opacity: 0;
+}
+	

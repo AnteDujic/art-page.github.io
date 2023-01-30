@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--- Author: Ante Dujic -->
+<html lang="en">
+
+<head>
+	<title>Contact Page</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!-- Navigation bar -->
+	<nav class="navbar">
+		<div class="logoContainer"><img id="logo" src="logoW.png" alt="Logo White", width="100"></div>
+		<div class="pages">
+			<ul>
+				<li><a href="home.html">HOME</a></li>
+				<li><a href="artwork.html">ARTWORK</a></li>
+				<li><a href="insights.html">INSIGHTS</a></li>
+				<li class="active"><a class="active" href="contact.html">CONTACT</a></li>
+				<li><a href="about.html">ABOUT</a></li>
+			</ul>
+		
+	</nav>
+	
+	<!-- Form container -->
+	<div class="formContainer">
+		<!-- Form -->
+		<form>
+			<!-- First Name -->
+			<label for="fname">Your first name</label></br>
+			<!-- Input of type text for first name, set to be required (can't be left empty). -->
+			<input class="inputText" type="text" id="fname" name="firstname" placeholder="Your name.." required></br>
+			<!-- Last Name -->
+			<label for="lname">Your last name</label></br>
+			<!-- Input of type text for last name, set to be required (can't be left empty). -->
+			<input class="inputText" type="text" id="lname" name="lastname" placeholder="Your last name.." required></br>
+			<!-- Email -->
+			<label for="email">Your email address</label></br>
+			<!-- 
+				Input of type email for email address, set to be required (can't be left empty).
+				By default checks if an email address is inputted (checking if usual email format is used (e.g. "@")
+			-->
+			<input class="inputText" type="email" id="email" placeholder="Your email address.." required></br>
+			<!-- Message -->
+			<label for="subject">Your message</label></br>
+			<!-- 
+				Textarea, set to be required (can't be left empty).	-->
+			<textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
+			<!-- Button -->
+			<input class="inputSubmit" type="submit" value="Send Message">
+		</form>
+	</div>
+	
+</body>
+
+</html>
